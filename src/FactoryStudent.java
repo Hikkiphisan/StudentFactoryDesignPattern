@@ -1,13 +1,16 @@
 public class FactoryStudent {
+    private int id;
+    private String name;
 
-    public String FactoryStudent(Student typeStudent, int id, String name) {
+    public static Student getStudent(TypeStudent typeStudent) {
         switch (typeStudent) {
-            case StudentHistory:
-                return new StudentHistory;
-            case StudentMath:
-                return "数学";
+            case MATHSTUDENT:
+                return new StudentMath();
+            case HISTORYSTUDENT:
+                return new StudentHIstory();
             default:
-                throw new IllegalArgumentException("");
+                throw new IllegalArgumentException("Type black is unsupported");
         }
     }
+
 }

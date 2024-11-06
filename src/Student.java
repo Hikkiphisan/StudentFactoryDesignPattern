@@ -1,6 +1,3 @@
-public abstract Student {
-
-    public Student(id, name) {
-
-    }
+public interface Student {
+    String getNameStudent();
 }
